@@ -1,4 +1,4 @@
-#include "main.h"
+#include "simpleshell.h"
 
 /**
  * cmp_env_name - is a function that compares environment variables names

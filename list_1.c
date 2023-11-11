@@ -1,4 +1,4 @@
-#include "main.h"
+#include "simpleshell.h"
 
 /**
  * add_sep_node_end -function that  adds a separator found

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "simpleshell.h"
 
 /**
  * aux_help - is a function that help information for the builtin help function
