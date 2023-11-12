@@ -315,7 +315,7 @@ $ echo $NAME
 $
 ```
 
-## Authors :black_nib
+## Authors :
 
 * Cosmas Ngetich <[ck-ngetich]>
 * Babalola Ghaniyat .A.<[Ghaniyat27]>

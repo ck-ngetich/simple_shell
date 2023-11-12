@@ -1,9 +1,9 @@
-#include "main.h"
+#include "simpleshell.h"
 
 /**
  * exec_line_sh - Discover Builtins and CMD.
  *
- * @datash: data relevant (args)
+ * @datash: Data Relevant (args)
  * Return: 1 on Success.
  */
 int exec_line_sh(data_shell *datash)

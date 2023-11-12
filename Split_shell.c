@@ -1,4 +1,4 @@
-#include "main.h"
+#include "simpleshell.h"
 
 /**
  * swap_char_sh - Swaps | and & for Non-printed char's

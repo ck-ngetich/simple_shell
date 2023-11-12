@@ -1,4 +1,4 @@
-#include "main.h"
+#include "simpleshell.h"
 
 /**
  * get_help_sh - Function that Obtains help Messages According with builtin

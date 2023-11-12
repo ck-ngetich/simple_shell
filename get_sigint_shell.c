@@ -1,4 +1,4 @@
-#include "main.h"
+#include "simpleshell.h"
 
 /**
  * get_sigint - handle's the crtl + c call in prompt
