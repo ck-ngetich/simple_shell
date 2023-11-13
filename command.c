@@ -151,7 +151,7 @@ return;
 
 if (chdir(home) == -1)
 {
-get_error(datash, 2);
+get_error_sh(datash, 2);
 free(p_pwd);
 return;
 }
