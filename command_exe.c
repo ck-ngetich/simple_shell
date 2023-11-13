@@ -113,7 +113,7 @@ if (stat(input + i, &st) == 0)
 {
 return (i);
 }
-get_error(datash, 127);
+get_error_sh(datash, 127);
 return (-1);
 }
 
