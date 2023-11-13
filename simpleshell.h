@@ -132,21 +132,21 @@ int first_char(char *input, int *i);
 void print_syntax_error(data_shell *datash, char *input, int i, int bool);
 int check_syntax_error(data_shell *datash, char *input);
 
-/* shell_loop.c */
+/* sim_shell_loop.c */
 char *without_comment(char *in);
 void shell_loop(data_shell *datash);
 
-/* read_line.c */
+/* read_line_sh.c */
 char *read_line(int *i_eof);
 
-/* split.c */
+/* split_shell.c */
 char *swap_char(char *input, int bool);
 void add_nodes(sep_list **head_s, line_list **head_l, char *input);
 void go_next(sep_list **list_s, line_list **list_l, data_shell *datash);
 int split_commands(data_shell *datash, char *input);
 char **split_line(char *input);
 
-/* rep_var.c */
+/* rep_var_sh.c */
 void check_env(r_var **h, char *in, data_shell *data);
 int check_vars(r_var **h, char *in, char *st, data_shell *data);
 char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
@@ -159,7 +159,7 @@ ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
 /* exec_line_shell.c */
 int exec_line_sh(data_shell *datash);
 
-/* cmd_exec.c */
+/* command_exe.c */
 int is_cdir(char *path, int *i);
 char *_which(char *cmd, char **_environ);
 int is_executable(data_shell *datash);
@@ -182,13 +182,13 @@ void cd_to(data_shell *datash);
 void cd_previous(data_shell *datash);
 void cd_to_home(data_shell *datash);
 
-/* command_exe.c */
+/* command_shell.c */
 int cd_shell(data_shell *datash);
 
-/* get_builtin */
+/* get_builtin_sh.c */
 int (*get_builtin(char *cmd))(data_shell *datash);
 
-/* _exit.c */
+/* exit_sim_shell.c */
 int exit_shell(data_shell *datash);
 
 /* built_in.c */
