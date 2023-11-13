@@ -1,13 +1,13 @@
 #include "simpleshell.h"
 
 /**
- * swap_char_sh - Swaps | and & for Non-printed char's
+ * swap_cha - Swaps | and & for Non-printed char's
  *
  * @input: Input String
  * @bool: Type's of Swap
  * Return: Swapped String
  */
-char *swap_char_sh(char *input, int bool)
+char *swap_char(char *input, int bool)
 {
 	int i;
 
@@ -122,14 +122,14 @@ void go_next(sep_list **list_s, line_list **list_l, data_shell *datash)
 }
 
 /**
- * split_commands_sh - Splits CMD Lines According to
+ * split_commands - Splits CMD Lines According to
  * the Separator's ;, | and &, and Executes them.
  *
  * @datash: Data Struct
  * @input: Input Str
  * Return: 0 to exit, 1 to continue
  */
-int split_commands_sh(data_shell *datash, char *input)
+int split_commands(data_shell *datash, char *input)
 {
 
 	sep_list *head_s, *list_s;
@@ -169,12 +169,12 @@ int split_commands_sh(data_shell *datash, char *input)
 }
 
 /**
- * split_line_sh - Tokenize's the Input String.
+ * split_line - Tokenize's the Input String.
  *
  * @input: Input Str.
  * Return: String should be Splitted.
  */
-char **split_line_sh(char *input)
+char **split_line(char *input)
 {
 	size_t bsize;
 	size_t k;
