@@ -66,7 +66,7 @@ getcwd(pwd, sizeof(pwd));
 dir = datash->args[1];
 if (chdir(dir) == -1)
 {
-get_error(datash, 2);
+get_error_sh(datash, 2);
 return;
 }
 
@@ -151,7 +151,7 @@ return;
 
 if (chdir(home) == -1)
 {
-get_error(datash, 2);
+get_error_sh(datash, 2);
 free(p_pwd);
 return;
 }
@@ -161,4 +161,3 @@ set_env("PWD", home, datash);
 free(p_pwd);
 datash->status = 0;
 }
-
