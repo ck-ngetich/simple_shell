@@ -36,7 +36,7 @@ char *without_comment(char *in)
 }
 
 /**
- * shell_loop - loop of Sh
+ * shell_loop - loop of Shell
  * @datash: Data Relevant (av, input, args)
  *
  * Return: No Return.
