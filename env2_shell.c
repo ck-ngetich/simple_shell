@@ -69,7 +69,7 @@ int _setenv(data_shell *datash)
 
 	if (datash->args[1] == NULL || datash->args[2] == NULL)
 	{
-		get_error_sh(datash, -1);
+		get_error(datash, -1);
 		return (1);
 	}
 

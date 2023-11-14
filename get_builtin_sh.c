@@ -2,7 +2,7 @@
 
 /**
  * get_builtin - Builtin that Pairs the cmd in the Args
- * @cmd: command
+ * @cmd: Command
  * Return: Function pointer of the builtin cmd
  */
 int (*get_builtin(char *cmd))(data_shell *)
@@ -10,10 +10,10 @@ int (*get_builtin(char *cmd))(data_shell *)
 	builtin_t builtin[] = {
 		{ "env", _env },
 		{ "exit", exit_shell },
-		{ "setenv", _setenv_sh },
-		{ "unsetenv_sh", _unsetenv_sh },
+		{ "setenv", _setenv },
+		{ "unsetenv_sh", _unsetenv },
 		{ "cd", cd_shell },
-		{ "help", get_help_sh },
+		{ "help", get_help },
 		{ NULL, NULL }
 	};
 	int i;
