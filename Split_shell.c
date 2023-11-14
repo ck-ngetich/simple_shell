@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * swap_cha - Swaps | and & for Non-printed char's
+ * swap_char - Swaps | and & for Non-printed char's
  *
  * @input: Input String
  * @bool: Type's of Swap
