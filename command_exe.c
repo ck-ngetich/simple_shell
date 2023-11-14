@@ -113,7 +113,7 @@ if (stat(input + i, &st) == 0)
 {
 return (i);
 }
-get_error_sh(datash, 127);
+get_error(datash, 127);
 return (-1);
 }
 
@@ -128,7 +128,7 @@ int check_error_cmd(char *dir, data_shell *datash)
 {
 if (dir == NULL)
 {
-get_error_sh(datash, 127);
+get_error(datash, 127);
 return (1);
 }
 
@@ -136,7 +136,7 @@ if (_strcmp(datash->args[0], dir) != 0)
 {
 if (access(dir, X_OK) == -1)
 {
-get_error_sh(datash, 126);
+get_error(datash, 126);
 free(dir);
 return (1);
 }
@@ -146,7 +146,7 @@ else
 {
 if (access(datash->args[0], X_OK) == -1)
 {
-get_error_sh(datash, 126);
+get_error(datash, 126);
 return (1);
 }
 }

@@ -3,7 +3,7 @@
 /**
  * read_line - Read's the Input Str.
  *
- * @i_eof: Return the Value of getline function
+ * @i_eof: Return the Value of getline function's
  * Return: Input Str.
  */
 char *read_line(int *i_eof)

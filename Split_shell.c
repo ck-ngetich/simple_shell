@@ -46,8 +46,8 @@ char *swap_char(char *input, int bool)
 /**
  * add_nodes - Add Separator's and CMD Line's in the Lists
  *
- * @head_s: head of Separator List
- * @head_l: head of CMD Lines List
+ * @head_s: Head of Separator List
+ * @head_l: Head of Command's Lines List
  * @input: Input String
  * Return: No Return
  */
@@ -83,7 +83,7 @@ void add_nodes(sep_list **head_s, line_list **head_l, char *input)
  * go_next - Move to the Next CMD Line Stored
  *
  * @list_s: Separator List
- * @list_l: CMD Line List
+ * @list_l: Command Line List
  * @datash: Data Struct
  * Return: No Return
  */
@@ -122,7 +122,7 @@ void go_next(sep_list **list_s, line_list **list_l, data_shell *datash)
 }
 
 /**
- * split_commands - Splits CMD Lines According to
+ * split_commands - Splits Commad Lines According to
  * the Separator's ;, | and &, and Executes them.
  *
  * @datash: Data Struct

@@ -43,10 +43,10 @@ typedef struct data
 } data_shell;
 
 /**
- * struct sep_list_s - Singly Linked_list
+ * struct sep_list_s - Singly Linked list
  * @separator: ; | &
  * @next: Next Node
- * Description: Singly Linked_list to Store Separators
+ * Description: Singly Linked list to Store Separators
  */
 typedef struct sep_list_s
 {
@@ -56,9 +56,9 @@ typedef struct sep_list_s
 
 /**
  * struct line_list_s - Singly Linked_list
- * @line: CMD Line
+ * @line: Command's Line
  * @next: Next Node
- * Description: Single Linked_list to Store CMD lines
+ * Description: Single Linked_list to Stored CMD lines
  */
 typedef struct line_list_s
 {
@@ -87,7 +87,7 @@ typedef struct r_var_list
  * @name: The name of the command builtin i.e cd, exit, env
  * @f: data type pointer function.
  */
-typedef struct builtin_t
+typedef struct builtin_s
 {
 	char *name;
 	int (*f)(data_shell *datash);
@@ -173,8 +173,8 @@ int _env(data_shell *datash);
 /* environ2.c */
 char *copy_info(char *name, char *value);
 void set_env(char *name, char *value, data_shell *datash);
-int _setenv_sh(data_shell *datash);
-int _unsetenv_sh(data_shell *datash);
+int _setenv(data_shell *datash);
+int _unsetenv(data_shell *datash);
 
 /* command.c */
 void cd_dot(data_shell *datash);
@@ -211,7 +211,7 @@ char *error_path_126(data_shell *datash);
 
 
 /* get_error_shell.c */
-int get_error_sh(data_shell *datash, int eval);
+int get_error(data_shell *datash, int eval);
 
 /* get_sigint_shell.c */
 void get_sigint(int sig);
@@ -229,6 +229,6 @@ void aux_help_alias(void);
 void aux_help_cd(void);
 
 /* get_help_sh.c */
-int get_help_sh(data_shell *datash);
+int get_help(data_shell *datash);
 
 #endif

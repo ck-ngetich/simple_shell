@@ -1,13 +1,13 @@
 #include "simpleshell.h"
 
 /**
- * get_error_sh - Calls the error according with the builtin,
+ * get_error - Call's the Error Accordingly with the builtin,
  * syntax or permission or both
  * @datash: Data Struct that Contained Args
  * @eval: Error Value
  * Return: Error
  */
-int get_error_sh(data_shell *datash, int eval)
+int get_error(data_shell *datash, int eval)
 {
 	char *error;
 

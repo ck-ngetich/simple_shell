@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * get_sigint - handle's the crtl + c call in prompt
+ * get_sigint - handle's the crtl + c call's in prompt
  * @sig: Signal Handler
  */
 void get_sigint(int sig)

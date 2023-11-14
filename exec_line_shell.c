@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * exec_line_sh - Discover Builtins and CMD.
+ * exec_line_sh - Discover Builtin's and Command's.
  *
  * @datash: Data Relevant (args)
  * Return: 1 on Success.

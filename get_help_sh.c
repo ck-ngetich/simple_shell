@@ -1,11 +1,11 @@
 #include "simpleshell.h"
 
 /**
- * get_help_sh - Function that Obtains help Messages According with builtin
+ * get_help - Function's that Obtains help Messages Accordingly with builtin
  * @datash: Data Struct (Args and Input)
  * Return: return 0
 */
-int get_help_sh(data_shell *datash)
+int get_help(data_shell *datash)
 {
 
 	if (datash->args[1] == 0)

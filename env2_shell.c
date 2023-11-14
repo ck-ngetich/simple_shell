@@ -58,13 +58,13 @@ void set_env(char *name, char *value, data_shell *datash)
 }
 
 /**
- * _setenv_sh - Checks the Name of Environ Var
+ * _setenv - Checks the Name of Environ Var
  * against the passed name.
  * @datash: data relevant (Environ Name and Environ Val)
  *
  * Return: 1 on Success.
  */
-int _setenv_sh(data_shell *datash)
+int _setenv(data_shell *datash)
 {
 
 	if (datash->args[1] == NULL || datash->args[2] == NULL)
@@ -79,13 +79,13 @@ int _setenv_sh(data_shell *datash)
 }
 
 /**
- * _unsetenv_sh - An Environ Var is Deleted
+ * _unsetenv - An Environ Var is Deleted
  *
  * @datash: data relevant (Environ Name)
  *
  * Return: 1 on Success.
  */
-int _unsetenv_sh(data_shell *datash)
+int _unsetenv(data_shell *datash)
 {
 	char **realloc_environ;
 	char *var_env, *name_env;
@@ -93,7 +93,7 @@ int _unsetenv_sh(data_shell *datash)
 
 	if (datash->args[1] == NULL)
 	{
-		get_error_sh(datash, -1);
+		get_error(datash, -1);
 		return (1);
 	}
 	o = -1;
@@ -109,7 +109,7 @@ int _unsetenv_sh(data_shell *datash)
 	}
 	if (o == -1)
 	{
-		get_error_sh(datash, -1);
+		get_error(datash, -1);
 		return (1);
 	}
 	realloc_environ = malloc(sizeof(char *) * (m));

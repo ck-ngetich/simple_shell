@@ -10,35 +10,35 @@
  */
 void check_env(r_var **h, char *in, data_shell *data)
 {
-	int row, chr, j, lval;
+	int row, chr, k, lval;
 	char **_envr;
 
 	_envr = data->_environ;
 	for (row = 0; _envr[row]; row++)
 	{
-		for (j = 1, chr = 0; _envr[row][chr]; chr++)
+		for (k = 1, chr = 0; _envr[row][chr]; chr++)
 		{
 			if (_envr[row][chr] == '=')
 			{
 				lval = _strlen(_envr[row] + chr + 1);
-				add_rvar_node(h, j, _envr[row] + chr + 1, lval);
+				add_rvar_node(h, k, _envr[row] + chr + 1, lval);
 				return;
 			}
 
-			if (in[j] == _envr[row][chr])
-				j++;
+			if (in[k] == _envr[row][chr])
+				k++;
 			else
 				break;
 		}
 	}
 
-	for (j = 0; in[j]; j++)
+	for (k = 0; in[k]; k++)
 	{
-		if (in[j] == ' ' || in[j] == '\t' || in[j] == ';' || in[j] == '\n')
+		if (in[k] == ' ' || in[k] == '\t' || in[k] == ';' || in[k] == '\n')
 			break;
 	}
 
-	add_rvar_node(h, j, NULL, 0);
+	add_rvar_node(h, k, NULL, 0);
 }
 
 /**
