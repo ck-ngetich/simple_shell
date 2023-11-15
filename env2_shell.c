@@ -89,40 +89,40 @@ int _unsetenv(data_shell *datash)
 {
 	char **realloc_environ;
 	char *var_env, *name_env;
-	int i, j, k;
+	int m, n, o;
 
 	if (datash->args[1] == NULL)
 	{
 		get_error(datash, -1);
 		return (1);
 	}
-	k = -1;
-	for (i = 0; datash->_environ[i]; i++)
+	o = -1;
+	for (m = 0; datash->_environ[m]; m++)
 	{
-		var_env = _strdup(datash->_environ[i]);
+		var_env = _strdup(datash->_environ[m]);
 		name_env = _strtok(var_env, "=");
 		if (_strcmp(name_env, datash->args[1]) == 0)
 		{
-			k = i;
+			o = m;
 		}
 		free(var_env);
 	}
-	if (k == -1)
+	if (o == -1)
 	{
 		get_error(datash, -1);
 		return (1);
 	}
-	realloc_environ = malloc(sizeof(char *) * (i));
-	for (i = j = 0; datash->_environ[i]; i++)
+	realloc_environ = malloc(sizeof(char *) * (m));
+	for (m = n = 0; datash->_environ[m]; m++)
 	{
-		if (i != k)
+		if (m != o)
 		{
-			realloc_environ[j] = datash->_environ[i];
-			j++;
+			realloc_environ[n] = datash->_environ[m];
+			n++;
 		}
 	}
-	realloc_environ[j] = NULL;
-	free(datash->_environ[k]);
+	realloc_environ[n] = NULL;
+	free(datash->_environ[o]);
 i	free(datash->_environ);
 	datash->_environ = realloc_environ;
 	return (1);
