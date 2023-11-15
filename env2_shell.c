@@ -115,7 +115,7 @@ int _unsetenv(data_shell *datash)
 	realloc_environ = malloc(sizeof(char *) * (i));
 	for (i = j = 0; datash->_environ[i]; i++)
 	{
-		if (i != o)
+		if (i != k)
 		{
 			realloc_environ[j] = datash->_environ[i];
 			j++;
